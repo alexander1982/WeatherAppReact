@@ -1,0 +1,20 @@
+const React = require('react');
+
+var WeatherMessage = ({locationName, temp}) => {
+	var resultMessage;
+
+	if (locationName == '' && temp == ''){
+		resultMessage = 'Type the location in search window and press the "Get Weather" button';
+	}else {
+		resultMessage = `Temperature in ${locationName} is ${temp}C`;
+	}
+
+	return(
+	<div>
+		<h1>{resultMessage}</h1>
+	</div>
+	)
+};
+
+
+module.exports = WeatherMessage;
