@@ -8,7 +8,7 @@ let WeatherMessage = ({locationName, temp}) => {
 	}else {
 		resultMessage = `Temperature in ${locationName} is ${temp}C`;
 	}
-
+	
 	return(
 	<div>
 		<h1>{resultMessage}</h1>
