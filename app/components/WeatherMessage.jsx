@@ -1,6 +1,6 @@
-const React = require('react');
+let React = require('react');
 
-var WeatherMessage = ({locationName, temp}) => {
+let WeatherMessage = ({locationName, temp}) => {
 	var resultMessage;
 
 	if (locationName == '' && temp == ''){
@@ -15,6 +15,5 @@ var WeatherMessage = ({locationName, temp}) => {
 	</div>
 	)
 };
-
 
 module.exports = WeatherMessage;

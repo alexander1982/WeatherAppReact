@@ -1,7 +1,8 @@
-const React = require('react');
-const {Link, IndexLink} = require('react-router');
+let React = require('react');
+let PropTypes = require('prop-types');
+let {Link, IndexLink} = require('react-router');
 
-var Nav = (props) => {
+let Nav = (props) => {
 	return(
 	<div>
 		<h1>This is Navigation</h1>
@@ -10,6 +11,10 @@ var Nav = (props) => {
 		<Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
 	</div>
 	)
+};
+
+Nav.PropTypes = {
+	props: PropTypes.object
 };
 
 module.exports = Nav;

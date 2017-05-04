@@ -1,10 +1,15 @@
-const React    = require('react');
-const ReactDOM = require('react-dom');
-const Main = require('Main');
-const Weather = require('Weather');
-const About = require('About');
-const Examples = require('Examples');
-const {Router, Route, hashHistory, IndexRoute}=  require('react-router');
+var React    = require('react');
+var ReactDOM = require('react-dom');
+var Main = require('Main');
+var Weather = require('Weather');
+var About = require('About');
+var Examples = require('Examples');
+var {Router, Route, hashHistory, IndexRoute}=  require('react-router');
+var $ = require('jquery');
+
+//LOAD FOUNDATION
+require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(
 	<Router history={hashHistory}>
