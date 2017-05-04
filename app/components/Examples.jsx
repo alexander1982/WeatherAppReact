@@ -6,4 +6,4 @@ let Examples = (props) => {
 	)
 };
 
-module.exports = Examples;
+module.exports =  Examples;
