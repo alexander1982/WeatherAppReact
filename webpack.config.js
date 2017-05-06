@@ -3,7 +3,7 @@ var path = require('path');
 
 //noinspection JSUnresolvedFunction
 module.exports = {
-	entry  : [
+	entry    : [
 		'script-loader!jquery/dist/jquery.min.js',
 		'script-loader!foundation-sites/dist/foundation.min.js',
 		'./app/app.jsx'
@@ -11,9 +11,9 @@ module.exports = {
 	externals: {
 		jquery: 'jQuery'
 	},
-	plugins: [
+	plugins  : [
 		new webpack.ProvidePlugin({
-			'$': 'jquery',
+			'$'     : 'jquery',
 			'jQuery': 'jquery'
 		}),
 		new webpack.DefinePlugin({
@@ -22,33 +22,34 @@ module.exports = {
 			}
 		})
 	],
-	output : {
+	output   : {
 		path    : __dirname,
 		filename: './public/bundle.js'
 	},
-	resolve: {
-		modules      : [__dirname, 'node_modules'],
+	resolve  : {
+		modules   : [__dirname, 'node_modules'],
 		alias     : {
-			Main: 'app/components/Main.jsx',
-			Nav: 'app/components/Nav.jsx',
-			Weather: 'app/components/Weather.jsx',
-			About: 'app/components/About.jsx',
-			Examples: 'app/components/Examples.jsx',
-			WeatherForm: 'app/components/WeatherForm.jsx',
+			Main          : 'app/components/Main.jsx',
+			Nav           : 'app/components/Nav.jsx',
+			Weather       : 'app/components/Weather.jsx',
+			About         : 'app/components/About.jsx',
+			Examples      : 'app/components/Examples.jsx',
+			WeatherForm   : 'app/components/WeatherForm.jsx',
 			WeatherMessage: 'app/components/WeatherMessage.jsx',
-			OpenWeatherMap: 'app/api/OpenWeatherMap.jsx'
+			OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
+			ErrorModal    : 'app/components/ErrorModal.jsx'
 		},
 		extensions: ['.js', '.jsx']
 	},
-	module : {
+	module   : {
 		loaders: [
 			{
 				loader : 'babel-loader',
-				query  : {presets: ['react', 'es2015', 'stage-3']},
+				query  : { presets: ['react', 'es2015', 'stage-3'] },
 				test   : /\.jsx?$/,
 				exclude: /(node_modules|bower_components)/
 			}
 		]
 	},
-	devtool: 'cheap-module-eval-source-map'
+	devtool  : 'cheap-module-eval-source-map'
 };

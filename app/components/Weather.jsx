@@ -2,13 +2,15 @@ let React = require('react');
 let WeatherForm = require('WeatherForm');
 let WeatherMessage = require('WeatherMessage');
 let OpenWeatherMap = require('OpenWeatherMap');
+let ErrorModal = require('ErrorModal');
 let createReactClass = require('create-react-class');
 let PropTypes = require('prop-types');
 
 let Weather = createReactClass({
 	                               getInitialState() {
 		                               return {
-			                               isLoading: false
+			                               isLoading   : false,
+			                               errorMessage: undefined
 		                               }
 	                               },
 	                               handleSearch(location) {
@@ -22,13 +24,16 @@ let Weather = createReactClass({
 				                                             temp        : res.temp,
 				                                             isLoading   : false
 			                                             });
-		                               }, (errorMessage) => {
-			                               that.setState({ isLoading: false });
-			                               alert(errorMessage);
+		                               }, (e) => {
+			                               that.setState({
+				                                             errorMessage: e.message,
+				                                             isLoading   : false
+			                                             });
 		                               });
 	                               },
+	
 	                               render() {
-		                               let { locationName, temp, isLoading } = this.state;
+		                               let { locationName, temp, isLoading, errorMessage } = this.state;
 
 		                               function renderMessage() {
 			                               if(isLoading){
@@ -38,10 +43,19 @@ let Weather = createReactClass({
 			                               }
 		                               }
 
+		                               function renderError() {
+			                               if(typeof errorMessage === 'string'){
+				                               return (
+				                               <ErrorModal message={errorMessage}/>
+				                               )
+			                               }
+		                               }
+
 		                               return (
 		                               <div>
 			                               <WeatherForm onSearch={this.handleSearch}/>
 			                               {renderMessage()}
+			                               {renderError()}
 		                               </div>
 		                               )
 	                               }

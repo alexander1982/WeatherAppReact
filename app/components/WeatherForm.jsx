@@ -25,7 +25,8 @@ let WeatherForm = createReactClass({
 		                                   <div>
 			                                   <h1 className="subheader text-center">Get The Weather</h1>
 			                                   <div className="row text-center">
-				                                   <div className="small-centered small-12 large-centered large-6 medium-centered medium-8 columns">
+				                                   <div
+				                                   className="small-centered small-12 large-centered large-6 medium-centered medium-8 columns">
 					                                   <form className="callout text-center" onSubmit={this.onFormSubmit}>
 						                                   <div className="floated-label-wrapper">
 							                                   <input type="text" ref="location"/>
@@ -38,6 +39,5 @@ let WeatherForm = createReactClass({
 		                                   )
 	                                   }
                                    });
-
 
 module.exports = WeatherForm;
