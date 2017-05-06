@@ -37,7 +37,6 @@
     "axios": "^0.16.1",
     "css-loader": "^0.28.1",
     "foundation-sites": "6.2.0",
-    "scss-loader": "0.0.1",
     "style-loader": "^0.17.0"
   }
 }
