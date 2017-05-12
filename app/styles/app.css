@@ -1,6 +1,6 @@
 .background{
     height: 100%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) ), url(http://dreamicus.com/data/paradise/paradise-05.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) ), url(http://static4.businessinsider.com/image/55e47514dd0895f7118b4646-3032-1986/1398245798_53be956505_o.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,5 +32,5 @@ h1, h2, h3 {
 }
 
 li a{
-    color: rgba(70, 71, 230, 0.36);
+    color: rgba(0, 0, 0, 1);
 }
