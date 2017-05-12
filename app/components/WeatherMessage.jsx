@@ -11,7 +11,7 @@ let WeatherMessage = ({ locationName, temp }) => {
 
 	return (
 	<div>
-		<h1 className="text-center subheader">{resultMessage}</h1>
+		<h1 className="text-center white-text">{resultMessage}</h1>
 	</div>
 	)
 };

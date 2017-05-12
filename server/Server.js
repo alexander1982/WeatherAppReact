@@ -4,6 +4,7 @@ let bodyParser = require('body-parser');
 let path = require('path');
 
 let publicPath = path.join(__dirname, '../public');
+let imagesPath = path.join(__dirname, '../public/images');
 const PORT = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static(publicPath));
+app.use(express.static(imagesPath));
 app.use(bodyParser.json());
 
 app.listen(PORT, () => {

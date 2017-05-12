@@ -15,13 +15,13 @@ let Nav = CreateClass({
 		                      <div className="top-bar">
 			                      <div className="top-bar-left">
 				                      <ul className="dropdown menu" data-dropdown-menu>
-					                      <li className="menu-text">WeatherApp</li>
-					                      <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get
+					                      <li className="menu-tex">WeatherApp</li>
+					                      <li className="hide-for-small-only"><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get
 					                                                                                                        Weather</IndexLink>
 					                      </li>
-					                      <li><Link to="/about" activeClassName="active"
+					                      <li className="hide-for-small-only"><Link to="/about" activeClassName="active"
 					                                activeStyle={{fontWeight: 'bold'}}>About</Link></li>
-					                      <li><Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
+					                      <li className="hide-for-small-only"><Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
 					                      </li>
 				                      </ul>
 			                      </div>
@@ -29,10 +29,10 @@ let Nav = CreateClass({
 				                      <form onSubmit={this.onSearch}>
 																<ul className="menu">
 																	<li>
-																		<input type="search" placeholder="Search weather"/>
+																		<input type="search" placeholder="Search weather by city" className="hide-for-small-only hide-for-medium-only"/>
 																	</li>
 																	<li>
-																		<input type="submit" className="button" value="Get Weather"/>
+																		<input type="submit" className="button hide-for-small-only hide-for-medium-only" value="Get Weather"/>
 																	</li>
 																</ul>
 				                      </form>

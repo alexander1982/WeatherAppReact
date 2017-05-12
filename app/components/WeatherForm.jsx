@@ -23,13 +23,12 @@ let WeatherForm = createReactClass({
 	                                   render() {
 		                                   return (
 		                                   <div>
-			                                   <h1 className="subheader text-center">Get The Weather</h1>
 			                                   <div className="row text-center">
 				                                   <div
-				                                   className="small-centered small-12 large-centered large-6 medium-centered medium-8 columns">
-					                                   <form className="callout text-center" onSubmit={this.onFormSubmit}>
+				                                   className="small-centered small-12 large-centered large-4 medium-centered medium-6 columns">
+					                                   <form id="weather-form" className="callout text-center" onSubmit={this.onFormSubmit}>
 						                                   <div className="floated-label-wrapper">
-							                                   <input type="text" ref="location"/>
+							                                   <input type="search" ref="location" placeholder="Search weather by city"/>
 						                                   </div>
 						                                   <button className="button expanded hollow">Get Weather</button>
 					                                   </form>

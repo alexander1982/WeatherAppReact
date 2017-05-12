@@ -9,6 +9,8 @@ var $ = require('jquery');
 
 //LOAD FOUNDATION
 require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
+//LOAD APP STYLES
+require('style-loader!css-loader!applicationStyles');
 $(document).foundation();
 
 ReactDOM.render(

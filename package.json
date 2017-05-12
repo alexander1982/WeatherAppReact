@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "node server/Server.js",
+    "bundle": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -13,16 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "cors": "^2.8.3",
-    "create-react-class": "^15.5.2",
-    "express": "^4.15.2",
-    "path": "^0.12.7",
-    "react": "^15.5.3",
-    "react-dom": "^15.3.2",
-    "react-router": "^2.0.0",
-    "react-router-dom": "^4.1.1",
-    "webpack": "^2.3.3",
     "babel": "^6.23.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -30,8 +21,22 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "create-react-class": "^15.5.2",
+    "express": "^4.15.2",
+    "file-loader": "^0.11.1",
+    "image-webpack-loader": "^3.3.1",
+    "img-loader": "^2.0.0",
     "jquery": "^2.1.0",
-    "script-loader": "^0.7.0"
+    "path": "^0.12.7",
+    "react": "^15.5.3",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.0.0",
+    "react-router-dom": "^4.1.1",
+    "script-loader": "^0.7.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3"
   },
   "devDependencies": {
     "axios": "^0.16.1",

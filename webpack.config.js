@@ -37,9 +37,11 @@ module.exports = {
 			WeatherForm   : 'app/components/WeatherForm.jsx',
 			WeatherMessage: 'app/components/WeatherMessage.jsx',
 			OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
-			ErrorModal    : 'app/components/ErrorModal.jsx'
+			ErrorModal    : 'app/components/ErrorModal.jsx',
+			applicationStyles: 'app/styles/app.css',
+			backgroundImage: 'public/images/wall.jpg'
 		},
-		extensions: ['.js', '.jsx']
+		extensions: ['.js', '.jsx', '.jpg']
 	},
 	module   : {
 		loaders: [
@@ -48,6 +50,10 @@ module.exports = {
 				query  : { presets: ['react', 'es2015', 'stage-3'] },
 				test   : /\.jsx?$/,
 				exclude: /(node_modules|bower_components)/
+			},
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'url-loader!file-loader?limit=25000'
 			}
 		]
 	},

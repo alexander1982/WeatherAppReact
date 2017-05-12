@@ -5,6 +5,7 @@ let OpenWeatherMap = require('OpenWeatherMap');
 let ErrorModal = require('ErrorModal');
 let createReactClass = require('create-react-class');
 let PropTypes = require('prop-types');
+let image = require('backgroundImage');
 
 let Weather = createReactClass({
 	                               getInitialState() {
@@ -31,7 +32,7 @@ let Weather = createReactClass({
 			                                             });
 		                               });
 	                               },
-	
+
 	                               render() {
 		                               let { locationName, temp, isLoading, errorMessage } = this.state;
 
@@ -53,6 +54,7 @@ let Weather = createReactClass({
 
 		                               return (
 		                               <div>
+			                               <h1 className="text-center page-title">Get The Weather</h1>
 			                               <WeatherForm onSearch={this.handleSearch}/>
 			                               {renderMessage()}
 			                               {renderError()}
