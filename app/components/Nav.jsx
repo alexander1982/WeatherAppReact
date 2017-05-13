@@ -29,7 +29,7 @@ let Nav = CreateClass({
 				                      <form onSubmit={this.onSearch}>
 																<ul className="menu">
 																	<li>
-																		<input type="search" placeholder="Search weather by city" className="hide-for-small-only hide-for-medium-only"/>
+																		<input type="search" placeholder="Search weather" className="hide-for-small-only hide-for-medium-only"/>
 																	</li>
 																	<li>
 																		<input type="submit" className="button hide-for-small-only hide-for-medium-only" value="Get Weather"/>

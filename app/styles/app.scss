@@ -1,0 +1,49 @@
+$space-large: 2.5rem;
+$white-color: white;
+$cool-text-shadow:  0 0 1px #fff, 0 0 2px #f9fdff, 0 0 2px #a6f0ff, 0 0 20px #fffdf8, 0 0 3px #f4fffc, 0 0 3px #ff00de;
+$cool-box-shadow: 0 0 10px #fff, 0 0 40px #4f61ff, 0 0 10px rgba(197, 225, 253, 1), 0 0 10px rgba(145, 140, 255, 1), 0 0 30px #8171ff, 0 0 20px #ff00de;
+.background{
+    height: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.1) ), url(http://static4.businessinsider.com/image/55e47514dd0895f7118b4646-3032-1986/1398245798_53be956505_o.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100% !important;
+}
+
+.page-title{
+    margin-top: $space-large;
+    margin-bottom: $space-large;
+}
+
+input[type=search]{
+    box-shadow: none;
+}
+
+#weather-form{
+    border: none;
+}
+
+h1, h2, h3 {
+    color: $white-color;
+    text-shadow: $cool-text-shadow;
+}
+
+.white-text {
+    color: $white-color;
+    text-shadow: 1px 1px #0a0a0a;
+}
+
+li a{
+    color: rgb(172, 186, 255);
+}
+
+.blured {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.border {
+    border-radius: 50%;
+    box-shadow: $cool-box-shadow;
+}

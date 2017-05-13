@@ -8,7 +8,7 @@ let About = (props) => {
 				<div className="row">
 					<div className="small-12 medium-4 columns">
 						<div className="author-image">
-							<img src="http://bestanimations.com/Earth&Space/Earth/earth-spinning-rotating-animation-24.gif"/>
+							<img className="author-image border" src="http://www.cleopa.it/wp-content/uploads/2009/07/terra.gif"/>
 						</div>
 						<div className="author-social">
 							<a href="#">
